@@ -7,7 +7,7 @@ require_relative "../lib/room.rb"
 class RoomTest < Minitest::Test
   #setup
   def setup 
-    @house = House.new(400000, "123 sugar lane")
+    @house = House.new("$400000", "123 sugar lane")
   end
   #test it exists
   def test_it_exists

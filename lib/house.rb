@@ -1,9 +1,13 @@
 class House
   attr_reader :price, :address, :rooms
   def initialize(price, address, rooms = [])
-    @price = price
+    @price = reformat_price(price)
     @address = address
     @rooms = rooms
+  end
+
+  def reformat_price(input_price)
+    input_price.gsub("$", "").to_i
   end
   
   def add_room(room)
